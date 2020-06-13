@@ -1,0 +1,2 @@
+# dedicru
+Dedic.ru hosting :)
