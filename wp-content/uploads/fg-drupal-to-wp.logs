@@ -1,0 +1,38 @@
+=== START empty 2020-06-13 14:03:06 ===
+WordPress content removed
+=== END empty 2020-06-13 14:03:06 ===
+
+=== START import 2020-06-13 14:03:23 ===
+Connected with success to the Drupal database
+Drupal data found:
+0 articles
+102 stories
+39 pages
+0 categories
+0 tags
+
+[WARNING] Your Drupal database contains users. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> to import them.
+[WARNING] Your Drupal database contains comments. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> to import them.
+[WARNING] Your Drupal database contains custom nodes. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> to import them.
+[WARNING] Your Drupal database contains custom taxonomies. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> to import them.
+[WARNING] Your Drupal database contains URL alias. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> to import them.
+[WARNING] Your Drupal database contains forums. You need the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/" target="_blank">Premium version</a> and the <a href="https://www.fredericgilles.net/fg-drupal-to-wordpress/forum/" target="_blank">Forum add-on</a> to import them.
+Importing categories...
+0 categories imported
+Importing tags...
+0 tags imported
+Importing articles...
+0 articles imported
+Importing stories...
+[ERROR] Can't copy http://dedic.ru/dedic/files/stress.tar.gz to /home/andreyka/domains/w1.dedic.ru/public_html/wp-content/uploads/2005/07/stress.tar.gz : Not Found
+[ERROR] Can't copy http://dedic.ru/dedic/files/whmext.gif to /home/andreyka/domains/w1.dedic.ru/public_html/wp-content/uploads/2005/09/whmext.gif : Not Found
+[ERROR] Can't copy http://dedic.ru/dedic/files/whmext.gif to /home/andreyka/domains/w1.dedic.ru/public_html/wp-content/uploads/2005/09/whmext.gif : Not Found
+[ERROR] Can't copy http://dedic.ru/dedic/files/H-SphereBFD.tar.gz to /home/andreyka/domains/w1.dedic.ru/public_html/wp-content/uploads/2005/11/H-SphereBFD.tar.gz : Not Found
+102 stories imported
+Importing pages...
+39 pages imported
+2 medias imported
+Don't forget to modify internal links.
+IMPORT COMPLETED
+=== END import 2020-06-13 14:03:30 ===
+
