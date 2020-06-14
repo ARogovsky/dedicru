@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+
+		<title>DEDIC.RU: наследие об организации хостинга — Мемуары о системном администрировании хостинга выделенных серверов</title>
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://dedic.ru/wp-includes/css/dist/block-library/style.min.css" media="all">
+<link rel="stylesheet" id="twentytwenty-style-css" href="https://dedic.ru/wp-content/themes/twentytwenty/style.css" media="all">
+<style id="twentytwenty-style-inline-css">
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #cd2653; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #cd2653; }button,.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #cd2653; }.fill-children-accent,.fill-children-accent * { fill: #cd2653; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dcd7ca; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dcd7ca; }.wp-block-table.is-style-stripes { border-bottom-color: #dcd7ca; }.wp-block-latest-posts.is-grid li { border-top-color: #dcd7ca; }:root .has-subtle-background-color { color: #dcd7ca; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #cd2653; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #cd2653; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+body,input,textarea,button,.button,.faux-button,.wp-block-button__link,.wp-block-file__button,.has-drop-cap:not(:focus)::first-letter,.has-drop-cap:not(:focus)::first-letter,.entry-content .wp-block-archives,.entry-content .wp-block-categories,.entry-content .wp-block-cover-image,.entry-content .wp-block-latest-comments,.entry-content .wp-block-latest-posts,.entry-content .wp-block-pullquote,.entry-content .wp-block-quote.is-large,.entry-content .wp-block-quote.is-style-large,.entry-content .wp-block-archives *,.entry-content .wp-block-categories *,.entry-content .wp-block-latest-posts *,.entry-content .wp-block-latest-comments *,.entry-content p,.entry-content ol,.entry-content ul,.entry-content dl,.entry-content dt,.entry-content cite,.entry-content figcaption,.entry-content .wp-caption-text,.comment-content p,.comment-content ol,.comment-content ul,.comment-content dl,.comment-content dt,.comment-content cite,.comment-content figcaption,.comment-content .wp-caption-text,.widget_text p,.widget_text ol,.widget_text ul,.widget_text dl,.widget_text dt,.widget-content .rssSummary,.widget-content cite,.widget-content figcaption,.widget-content .wp-caption-text { font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,sans-serif; }
+</style>
+<link rel="stylesheet" id="twentytwenty-print-style-css" href="https://dedic.ru/wp-content/themes/twentytwenty/print.css" media="print">
+<script src="https://dedic.ru/wp-content/themes/twentytwenty/assets/js/index.js" async></script>
+
+
+
+	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+	<link rel="icon" href="https://dedic.ru/wp-content/uploads/2020/06/cropped-16b3d258-b9f4-4c6b-8f06-9dd027ad4f8e_200x200-32x32.png" sizes="32x32">
+<link rel="icon" href="https://dedic.ru/wp-content/uploads/2020/06/cropped-16b3d258-b9f4-4c6b-8f06-9dd027ad4f8e_200x200-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://dedic.ru/wp-content/uploads/2020/06/cropped-16b3d258-b9f4-4c6b-8f06-9dd027ad4f8e_200x200-180x180.png">
+<meta name="msapplication-TileImage" content="https://dedic.ru/wp-content/uploads/2020/06/cropped-16b3d258-b9f4-4c6b-8f06-9dd027ad4f8e_200x200-270x270.png">
+
+	</head>
+
+	<body class="home blog wp-custom-logo wp-embed-responsive enable-search-modal has-no-pagination showing-comments show-avatars footer-top-visible">
+
+		<a class="skip-link screen-reader-text" href="#site-content">Перейти к содержимому</a>
+		<header id="site-header" class="header-footer-group" role="banner">
+
+			<div class="header-inner section-inner">
+
+				<div class="header-titles-wrapper">
+
+					
+						<button class="toggle search-toggle mobile-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+							<span class="toggle-inner">
+								<span class="toggle-icon">
+									<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg>								</span>
+								<span class="toggle-text">Поиск</span>
+							</span>
+						</button>
+
+					
+					<div class="header-titles">
+
+						<h1 class="site-logo"><a href="https://dedic.ru/" class="custom-logo-link" rel="home"><img width="275" height="309" src="https://dedic.ru/wp-content/uploads/2020/06/cropped-dedic-logo.png" class="custom-logo" alt="DEDIC.RU: наследие об организации хостинга" srcset="https://dedic.ru/wp-content/uploads/2020/06/cropped-dedic-logo.png 275w,https://dedic.ru/wp-content/uploads/2020/06/cropped-dedic-logo-267x300.png 267w" sizes="(max-width: 275px) 100vw, 275px"></a><span class="screen-reader-text">DEDIC.RU: наследие об организации хостинга</span></h1><div class="site-description">Мемуары о системном администрировании хостинга выделенных серверов</div>
+					</div>
+
+					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
+						<span class="toggle-inner">
+							<span class="toggle-icon">
+								<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="7" viewbox="0 0 26 7"><path fill-rule="evenodd" d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z" transform="translate(-329 -38)"></path></svg>							</span>
+							<span class="toggle-text">Меню</span>
+						</span>
+					</button>
+
+				</div>
+
+				<div class="header-navigation-wrapper">
+
+					
+							<nav class="primary-menu-wrapper" aria-label="Горизонтальное" role="navigation">
+
+								<ul class="primary-menu reset-list-style">
+
+								<li class="page_item page-item-111"><a href="https://dedic.ru/%d0%be-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b5-%d0%b4%d0%b5%d0%b4%d0%b8%d0%ba-%d1%80%d1%83/">О проекте Дедик.ру</a></li>
+
+								</ul>
+
+							</nav>
+
+						
+						<div class="header-toggles hide-no-js">
+
+						
+							<div class="toggle-wrapper search-toggle-wrapper">
+
+								<button class="toggle search-toggle desktop-search-toggle" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+									<span class="toggle-inner">
+										<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewbox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg>										<span class="toggle-text">Поиск</span>
+									</span>
+								</button>
+
+							</div>
+
+							
+						</div>
+						
+				</div>
+
+			</div>
+
+			<div class="search-modal cover-modal header-footer-group" data-modal-target-string=".search-modal">
+
+	<div class="search-modal-inner modal-inner">
+
+		<div class="section-inner">
+
+			<form role="search" aria-label="Поиск:" method="get" class="search-form" action="https://dedic.ru/">
+	<label for="search-form-1">
+		<span class="screen-reader-text">Поиск:</span>
+		<input type="search" id="search-form-1" class="search-field" placeholder="Найти …" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Искать">
+</form>
+
+			<button class="toggle search-untoggle close-search-toggle fill-children-current-color" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
+				<span class="screen-reader-text">Закрыть поиск</span>
+				<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg>			</button>
+
+		</div>
+
+	</div>
+
+</div>
+
+		</header>
+
+		
+<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
+
+	<div class="menu-modal-inner modal-inner">
+
+		<div class="menu-wrapper section-inner">
+
+			<div class="menu-top">
+
+				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
+					<span class="toggle-text">Закрыть меню</span>
+					<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg>				</button>
+
+				
+					<nav class="mobile-menu" aria-label="Мобильные" role="navigation">
+
+						<ul class="modal-menu reset-list-style">
+
+						<li class="page_item page-item-111"><div class="ancestor-wrapper"><a href="https://dedic.ru/%d0%be-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b5-%d0%b4%d0%b5%d0%b4%d0%b8%d0%ba-%d1%80%d1%83/">О проекте Дедик.ру</a></div></li>
+
+						</ul>
+
+					</nav>
+
+					
+			</div>
+
+			<div class="menu-bottom">
+
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<main id="site-content" role="main">
+
+	
+<article class="post-103 post type-post status-publish format-standard sticky hentry category-1" id="post-103">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d0%bd%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%b8%d0%b5/" rel="category tag">Наследие</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%b2%d1%8b%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80-%d0%b8%d0%bb%d0%b8-%d0%bf%d0%be%d1%87%d0%b5%d0%bc/">Что такое выделенный сервер или почему дедик?</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%b2%d1%8b%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b9-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80-%d0%b8%d0%bb%d0%b8-%d0%bf%d0%be%d1%87%d0%b5%d0%bc/">08.04.2005</a>
+						</span>
+					</li>
+										<li class="post-sticky meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewbox="0 0 15 18"><path d="M12.598889,2.699762 C12.598889,2.20275 12.195981,1.799841 11.698969,1.799841 L2.699762,1.799841 C2.20275,1.799841 1.799841,2.20275 1.799841,2.699762 L1.799841,15.349777 L6.676297,11.866594 C6.989197,11.643094 7.409533,11.643094 7.722434,11.866594 L12.598889,15.349777 L12.598889,2.699762 Z M1.422989,17.830788 C0.82736,18.256238 0,17.830464 0,17.098493 L0,2.699762 C0,1.208725 1.208725,0 2.699762,0 L11.698969,0 C13.190006,0 14.398731,1.208725 14.398731,2.699762 L14.398731,17.098493 C14.398731,17.830464 13.571371,18.256238 12.975742,17.830788 L7.199365,13.704805 L1.422989,17.830788 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Закрепленная запись						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<h2>Dedicated Server — выделенный сервер <strong>(англ.)</strong>.</h2>
+<h3>Дедик — выделенный сервер <strong>(жарг.)</strong>.</h3>
+<p>Dedicated хостинг, в отличие от виртуального, где множество сайтов различных клиентов размещены на одном сервере и обслуживаются провайдером, представляет собой выделенный сервер, расположенный в специальном месте — дата-центре, где ему обеспечивается подача питания, канал и место в стойке.</p>
+<p>Само собой разумеется, что выделенный сервер предоставляет своему владельцу все ресурсы без ограничений. Мало того, владелец дедика может установить на него любое ПО, в том числе и самописное, которое ни один хостер не даст установить на виртуальном (shared) хостинге.</p>
+<p>По обслуживанию серверы делятся на две категории: <strong>unmanaged</strong> <cite>(необслуживаемые)</cite> и <strong>managed</strong> <cite>(обслуживаемые)</cite>. Техподдержка unmanaged серверов сводится к двум действиям — перезагрузке сервера по запросу (тикету) и переустановке ОС в случае выхода ее из строя по причине неграмотного обращения или взлома с последующим захватом суперпользователем и подменой критично важных файлов.</p>
+<p>Техподдержка managed весьма расплывчата и зависит от уровня самого персонала, предоставляемых часов рабочего времени, гарантированной сетевой доступности (SLA), гарантированного времени реакции и сложности проблемы.</p>
+<p><br>
+Техподдержка <cite>(support)</cite> делится на уровни <cite>(levels)<cite>.</cite></cite></p>
+<p>В круг задач support level 1 входят ребуты, ответы на часто задаваемые вопросы, а также оттягивание времени разными глупыми уточнениями, пока тикет обрабатывает саппорт с более высоким уровнем. Иногда в штате нет такого специалиста и решение проблемы может затянуться надолго. В приличных дата-центрах support level 1 передает тикет, а сам честно пишет, что не смог справиться с проблемой и передал ее более квалифицированному специалисту. Это называется эскалацией тикета. Иногда время перехода эскалации может занимать 24 часа. Поинтересуйтесь в датацентре, какой у <strong>них</strong> период эскалации.</p>
+<p>В круг задач support level 2 входит решение типичных проблем — установка и настройка штатного ПО, пополнение базы знаний для support level 1, небольшой траблшутинг. Например, если cgi скрипт на perl требует модуль Image::Magick, support level 2 в силах это понять и поставить его. Однако он не делает траблшутинг, и в случае неудачи делает эскалацию.</p>
+<p>Support level 3 занимается решением глобальных проблем — траблшутингом. Когда сервер медленно работает или происходит частая пиковая загрузка, какое-то ПО не желает устанавливаться или не работает после установки, если есть подозрения на аппаратные проблемы — все это входит в компетенцию support level 3.</p>
+<p>Support level 4 находится в штате очень крупных и серьезных дата-центров или же работает на контрактной почасовой основе с более мелкими компаниями. В его компетенцию входит всё, в том числе и работа с незнакомым ему ПО, восстановление системы после взлома, поиск аккаунта, занимающегося спамом, установка системных лимитов и т.п.</p>
+<p>Следующая важная характеристика — это количество предоставляемого времени. Типичная практика дата-центров в случае какой-либо проблемы — это использование предоставленного времени специалистами низкого уровня, так как разделение по времени каждого уровня обычно не предоставляют. Типичная ситуация для неискушенного владельца дедика — «накрутка» времени разными уточнениями со стороны support level 1. Поэтому тикеты должны быть максимально информативными, предоставляющими всю, возможно даже, избыточную информацию. Или наоборот — предельно простыми, но с четкими требованиями, например, установить firewall, открыв 25,110 и 80-ые порты.<br>
+<cite>Обычно</cite> перезагрузки сервера — free, и время за них не списывается. В некоторых случаях даже предоставляется доступ к специальному оборудованию, которое способно выполнить перезагрузку сервера. Но, тем не менее, не найдя сочетания Free Reboots, поинтересуйтесь в дата-центре — сколько времени требуется на перезагрузку и будет ли оно учитываться. В среднем ребут занимает 5 — 15 минут.</p>
+<p>Вполне возможно, что Вам предложат иной режим работы — по числу тикетов. В этом случае предоставляется какое-то число запросов (20-100), на которые будут отвечать бесплатно, сверх лимита — придется оплачивать. Следует также учитывать, что это могут быть тикеты для support level 1, а за остальные придется доплачивать отдельно.</p>
+<p>SLA — уровень сетевой доступности. Он означает, что отправленный тикет будет прочитан даже в выходной день в полночь, и, соответственно, обработан в указанные сроки. Следует учесть, что несмотря на заверения и красующуюся надпись SLA 99%, на практике может выйти абсолютно не так.</p>
+<p>Гарантированное время реакции дата-центры сообщают с большой неохотой, и это вполне естественно. Невозможно приставить к каждому серверу по специалисту. Однако, если в контракте есть пометка, что реакция на urgent ticket — ребут, например, — 24 часа, стоит призадуматься. Это означает, что сервер может простаивать целые сутки при малейшей проблеме.</p>
+<p>Но <strong>что же такое особенное</strong> предоставляет дедик? Во-первых, это все ресурсы, а во-вторых, это нестандартные возможности. Например, для создания высокоскоростного доступа к сайтам на движках типа phpnuke могут быть использованы 2 веб-сервера, причем не обязательно на одном и том же дедике. Первый сервер — backend — предоставляет обычный апач, с php, mysql и т.п. Второй — frontend, представляющий собой простой кешируюший веб-сервер (http-ускоритель), который способен выдержать нагрузку в несколько сотен посещений одновременно.</p>
+<p>На что же еще требуется обращать внимание при выборе дедика?</p>
+<p>На суммарную толщину каналов, наличие их резерва. Порт, которым подключен сервер, также играет немаловажную роль. Не срезает ли дата-центр порты или протоколы, не отключает ли за излишнюю сетевую активность и каков ее порог? Возможность докупить дополнительные IP из другой подсети необходима только для NS доменов в зоне RU. Возможность в дальнейшем поставить больше памяти, дополнительный жесткий диск. Также следует обратить внимание на список панелей, их цену, а еще на список возможных ОС.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-102 post type-post status-publish format-standard hentry category-4" id="post-102">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b8%d1%82%d1%8c-%d0%b1%d0%b5%d1%81%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d1%83%d1%8e-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d1%83-%d0%b1%d0%b5/">Как установить бесплатную систему бекапов от R1Soft на Debian/Ubuntu</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b8%d1%82%d1%8c-%d0%b1%d0%b5%d1%81%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d1%83%d1%8e-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d1%83-%d0%b1%d0%b5/">30.01.2013</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b8%d1%82%d1%8c-%d0%b1%d0%b5%d1%81%d0%bf%d0%bb%d0%b0%d1%82%d0%bd%d1%83%d1%8e-%d1%81%d0%b8%d1%81%d1%82%d0%b5%d0%bc%d1%83-%d0%b1%d0%b5/#respond">Комментариев<span class="screen-reader-text"> к записи Как установить бесплатную систему бекапов от R1Soft на Debian/Ubuntu</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Сначала нужно установить репозиторий от R1Soft:</p>
+<p>echo deb http://repo.r1soft.com/apt stable main >> /etc/apt/sources.list<br>
+wget http://repo.r1soft.com/r1soft.asc<br>
+apt-key add r1soft.asc<br>
+apt-get update</p>
+<p>Затем поставим сам софт для бекапов:<br>
+<br>
+apt-get install serverbackup-free</p>
+<p>Теперь нужно собрать модуль ядра. Для этого:</p>
+<p>apt-get install linux-headers-`uname -r`<br>
+serverbackup-setup —get-module</p>
+<p>Если модуль не установился, что типично для Debian, то необходимо выполнить команды:</p>
+<p>cd /usr/src/<br>
+rsync -avz linux-headers-2.6.32-3-amd64/ /usr/src/r1build/<br>
+rsync -avz linux-headers-2.6.32-3-common/ /usr/src/r1build/<br>
+/usr/bin/r1soft-cki —get-module —kernel-dir /usr/src/r1build<br>
+/usr/bin/r1soft-setup —get-module —kernel-dir /usr/src/r1build</p>
+<p>После чего модуль успешно собирается.</p>
+<p>О дальнейшей настройке можно почитать <a href="http://www.pro100hosting.ru/%D0%B1%D0%B5%D0%BA%D0%B0%D0%BF%D1%8B-%D1%81-%D0%B2%D0%B5%D0%B1-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81%D0%BE%D0%BC-%D1%81-%D1%82%D0%BE%D1%87%D0%BA%D0%B0%D0%BC%D0%B8-%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81-%D1%81%D0%B6%D0%B0%D1%82%D0%B8%D0%B5%D0%BC-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE">тут</a></p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-101 post type-post status-publish format-standard hentry category-1" id="post-101">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d0%bd%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%b8%d0%b5/" rel="category tag">Наследие</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d1%85%d0%b0%d0%b9%d0%bb%d0%be%d0%b0%d0%b4-%d1%82%d0%b8%d0%bf%d0%b8%d1%87%d0%bd%d1%8b%d0%b5-%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8-%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d0%be%d0%b2/">Хайлоад: Типичные ошибки клиентов</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d1%85%d0%b0%d0%b9%d0%bb%d0%be%d0%b0%d0%b4-%d1%82%d0%b8%d0%bf%d0%b8%d1%87%d0%bd%d1%8b%d0%b5-%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8-%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d0%be%d0%b2/">20.08.2011</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d1%85%d0%b0%d0%b9%d0%bb%d0%be%d0%b0%d0%b4-%d1%82%d0%b8%d0%bf%d0%b8%d1%87%d0%bd%d1%8b%d0%b5-%d0%be%d1%88%d0%b8%d0%b1%d0%ba%d0%b8-%d0%ba%d0%bb%d0%b8%d0%b5%d0%bd%d1%82%d0%be%d0%b2/#respond">Комментариев<span class="screen-reader-text"> к записи Хайлоад: Типичные ошибки клиентов</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Все проблемы в хайлоаде носят довольно четко выраженный характер, и я хочу попробовать их классифицировать.</p>
+<h3>Мода важнее здравого смысла</h3>
+<p>Процитирую диалог с одним из клиентов:<br>
+<i><br>
+— Сколько стоит поставить nginx?<br>
+— Зависит от задачи, а в чем она состоит?<br>
+— У меня сайт медленно работает, и я слышал, что nginx позволяет его ускорить!<br>
+— Я вижу по анализатору, что на сайте более 200 изображений, а нагрузка на сервер при этом 2-3%. Проблема не в сервере, а в том, что слишком много изображений, на погрузку которых браузер тратит свои ресурсы.<br>
+— А разве nginx не ускорит их отдачу?<br>
+— Ускорит, но проблема не в скорости их загрузки, а в большом числе.<br>
+— Что же делать?<br>
+— Переписать дизайн, и вынести картинки подгрузкой в css.<br>
+— Это слишком долго, я хочу nginx и готов заплатить.<br>
+— Хорошо, но предупреждаю — это не сильно повлияет на скорость загрузки сайта.<br>
+</i><br>
+В результате, после установки nginx, клиент был вынужден обратиться к услугам профессионального верстальщика, который сократил его 200+ изображений до 83-х, вынеся все повторяющиеся элементы в css.<br>
+Его проблема была не в том, что он не понимал как пагубно влияет такое число изображений на скорость открытия страницы, а безумное следование моды: <b>медленно работает — ставь nginx!</b><br>
+</p>
+<h3>Гадание вместо статистики</h3>
+<p>Процитирую диалог с одним из клиентов:<br>
+<i><br>
+— Мне надо настроить MySQL!<br>
+— А что с ним такое?<br>
+— У меня клиенты на хостинге жалуются, что их сайты тормозят!<br>
+— Но я вижу, что mysql потребляет 2-5% RAM и 15-20% CPU. И нагрузки никакой нет, все запросы успешно попадают в кеш.<br>
+— Тогда надо поставить xcache для php, выдав ему больше памяти, потому что скорость открытия сайтов ну очень низкая!<br>
+— Я могу поставить, только не гарантирую, что это поможет.<br>
+— А что же делать?<br>
+— Заказать у меня аудит сервера, по результатам которого работать над найденными проблемами.<br>
+— Хорошо, заказываю.<br>
+</i><br>
+По результатам анализа, проблема оказалась в медленном выполнении кода SAPE, причиной которого стала медленная работа DNS ресловеров, предоставленных Дата-Центром: из 3-х работал только один, да и то с большими задержками.<br>
+Проблема решилась прописыванием DNS ресловера Goole 8.8.8.8 и 8.8.4.4</p>
+<h3>Наличие практического опыта без фундаментальных знаний</h3>
+<p>Эта проблема более актуальна для начинающих системных администраторов, которые случайно найдя решение какой-то проблемы, пытаются ее применять в похожих случаях, но без понимания источника этой проблемы.<br>
+<i><br>
+— Мне нужен аудит двух серверов, почему на одном сервере InnoDB работает правильно, а на другом — нет.<br>
+— А что значит правильно? Задачи у серверов одинаковые?<br>
+— На одном сервере после переноса базы в InnoDB, сайт стал открываться быстрее. А на другом сервере — нет.<br>
+— Хорошо, разберусь.<br>
+</i><br>
+На одном сервере сайт был на CMS Drupal, который умеет использовать InnoDB и имеет собственные схемы кеширования. Проблем никаких не возникало.<br>
+На другом сервере сайт был на CMS DLE, в запросах постоянно был select count с последующими множеством update. Так как CMS была лицензионная, примеры таких запросов были отправлены разработчику, который рекомендовал отключить счетчики страниц. После чего проблема пропала.<br>
+Провести сравнение запросов на серверах клиенту и в голову не приходило, он занимался тем, что постоянно менял параметры в конфиге mysql, в надежде, что станет быстрее работать.</p>
+<h3>Неумение разделять задачи</h3>
+<p>Один очень крупный заказчик, занимающийся стримингом и имеющий сайт, входящий в top-3 одной из узких ниш, пожаловался, что возникла проблема с конвертацией видео.<br>
+Сервер, который занимался конвертацией был очень мощный, но уже не смог обрабатывать все поступающие видео от пользователей с должной скоростью.<br>
+Мне нужно было произвести анализ, какой сервер лучше выбрать из ряда предложений дата-центра.<br>
+Как оказалось, конветрация более всего использовала ресурсы процессора и диска, в меньшей степени — оперативной памяти, которая пустовала на 90%.<br>
+Я предложил ему вместо перехода на новый сервер, взять 4-е более слабые модели, которые по цене выходили дешевле.<br>
+<i><br>
+— Нет, мне это не подойдет. Я буду конвертировать 4-е разных файла от пользователей, но конвертация все равно будет медленной, я уже это пробовал! Мне нужно один, но быстро!<br>
+— Так я для этого и советую взять 4-е сервера. Разделить видео на 4-е части, затем каждую часть сконвертировать на своем сервере. После чего склеить.<br>
+— А разве так можно?!<br>
+— Нужно.<br>
+</i><br>
+Разумеется, что конвертация прошла очень быстро, но главное — теперь клиент четко знает, сколько именно ему нужно докупить серверов, для того, чтоб скорость конвертации оставалась на должном уровне.</p>
+<h3>Отсутствие кеширования</h3>
+<p><i><br>
+— У меня большая нагрузка на MySQL. Посоветовали memcache! Я поставил — не помогло!<br>
+— В смысле — поставил?<br>
+— Ну сделал apt-get install memcached php5-memcache и рестартовал апач.<br>
+— И все?<br>
+— Да! А разве еще что-то надо?<br>
+</i><br>
+Множество людей тратит невероятно большие деньги на покупку мощных серверов. И все это из-за недостаточности понимания того, что же такое на самом деле является кеширование.<br>
+В качестве примера, я приведу решение проблемы на биржевой системе.<br>
+Сервера постоянно получают информацию по стоимости акций, клиенты просматривают графики, покупают-продают, вобщем как обычно.<br>
+При этом используется черезвычайно мощный сервер и программисты уверяют, что действительно оптимизировали все что могли, и проблема в недостатке железа. Но владелец проекта приводит другую статистику — с ростом каждой тысячи активных пользователей приходится брать вдвое мощный сервер. Сейчас их 4000 и если рост будет идти также быстро как и сейчас, то в скором времени придется переезжать на суперкомпьютер.<br>
+Аудит шел достаточно долго — на первый взгляд действительно, все было кешировано:</p>
+<ul>
+<li>повторяющиеся запросы складывались в memcache</li>
+<li>был установлен и настроен xcache, который хранил все php скрипты в оперативной памяти</li>
+<li>все статичные файлы выдавались с правильным заголовком expired</li>
+</ul>
+<p>А затем я нашел директорию, в которой были сотни тысяч файлов. На ее открытие уходило несколько секунд.<br>
+Дословно процитирую диалог:<br>
+— Это графики пользователей, которые они хотят получать. Там можно накладывать несколько графиков в один. У каждого пользователя — свои графики.<br>
+— А сколько всего акций и сколько всего пользователей?<br>
+— Примерно 400 акций и около 60000 пользователей.<br>
+— А если выдавать графики для каждой акции, а потом просто склеивать картинки в одну общую?<br>
+— Уже так думали делать, но будет большая нагрузка на диск — их все равно придется записывать перед отдачей.<br>
+— А зачем? Пусть они собираются на стороне клиента.<br>
+— Но как???<br>
+— При помощи javascript.<br>
+— Склеивать картинки через javascript на стороне клиента?<br>
+— Нет. Выдавать цифры, с помощью которых ajax будет рисовать графики, а цифры отдавать через push с помощью…<br>
+— Спасибо, уже не надо продолжать, поняли свою ошибку.<br>
+Кеширование — это не просто сохранение картинок на диске, это немного нечто большее…</p>
+<h3>Попытка масштабировать без понимания сути проблемы</h3>
+<p><i><br>
+— У нас есть сайт, с помощью которого пользователи могут размещать рекламу на страницах своих сайтов. Все бы ничего, но похоже, что надо разделять базу на множество серверов, так как она довольно часто тормозит и реклама не отображается.<br>
+— А вы пробовали найти причину тормозов и воспроизвести их?<br>
+— Нет, а разве это надо? По этому и надо масштабирование, чтоб не заморачиваться.<br>
+</i><br>
+Не буду томить, мне удалось убедить заказчика вначале заказать аудит сервера на предмет подобных тормозов.<br>
+Причина частых торможений заключалась в том, что биллинг вызывался по крону каждую минуту и для пересчета зачем-то лочил все таблицы.<br>
+Как выяснилось, это было сделано для того, чтоб клиенты не выполняли никаких действий на момент отсчета биллинга.<br>
+Мной было предложено решение в виде сохранения заказов в отдельную таблицу, которые будут вливаться в общую базу данных при помощи того-же скрипта биллинга.<br>
+Владелец согласился, так как задержка в обработке заказа была не более минуты, а это не так критично как покупка серверов для масштабирования, которое кстати бы не спасло от этой проблемы.</p>
+<h3>Наличие единой точки отказа</h3>
+<p>Компания, поставлявшая услуги хостинга картинок, решила подумать о защите от DDOS атак. Не смотря на многочисленные доводы о том, что лучшая защита от DDOS — это кластер грамотно настроенных серверов с фильтрацией, технический директор компании решил использовать Cisco RiverGuard для защиты.<br>
+Шло время, одного сервера стало недостаточно, и незаметно их число возросло до шестидесяти. Сервера закупались, ставились в стойки, но весь трафик продолжал идти через циску.<br>
+А потом наступила проблема — трафик перестал расти. Раньше, с ростом числа серверов трафик рос пропорционально, но сейчас перестал.<br>
+Я снял статистику с циски по snmp и убедился, что эта железка испытывает явные проблемы с перегрузками. Техдиректор сразу решил, что началась DDOS атака.<br>
+Однако по анализу логов все было чисто. Проблема была явно в перегрузке точки, через которую шел трафик.<br>
+Тем не менее, владельца бизнеса это не убедило, так как технический директор мотивировал тем, что «Cisco — это сила, а частный консультант — это обычный человек».<br>
+Проблема продолжалась в течении года, пока наконец под моими многочисленными уговорами, технический директор не отправил кейс с графиками загрузки.<br>
+Ответ пришел достаточно быстро, в котором однозначно указывалось, что этот девайс перестанет нормально работать, если число одновременных запросов будет выше 70k.<br>
+После этого владелец наконец рискнул убрать Guard с канала, напрямую дав его на все стойки. Разумеется, трафик начал расти.<br>
+Однако тот, кто прочитав, подумает, что единая точка отказа это Cisco RiverGuard, тот ошибется. Разумеется, единой точной отказа был технический директор.</p>
+<h3>Белогривые лошадки</h3>
+<p><i>У нас есть игра для социальной сети Вконтакте. Мы хотим сделать версию для Facebook, но боимся, что сервер не выдержит. По этому мы перешли на облако, а кластер для нас это слишком дорого для начала. Но потом, когда мы заработаем, то обязательно перейдем на кластер.</i><br>
+Когда у вас появляется кластер, то вы все равно будете иметь некий лимит ресурсов, определяемый числом серверов в кластере.<br>
+Облако напротив — дает мифическую свободу ресурсов, позволяя на какой-то момент не задумываться, а просто оплачивать перерасход ресурсов, в надежде, что прибыль окупит затраты.<br>
+Коварство заключается в том, что рост нагрузки не связан линейно с ростом посещаемости и целиком зависит от радиуса кривизны приложения. Наверное каждый слышал притчу о награде изобретателя шахмат?<br>
+На первую клетку шахматной доски — одно зернышко, на второе — два, и так далее.<br>
+Так и с облаками. На первую тысячу посетителей — один слот, на вторую — два, на третью — четыре. А вот когда их становится пять, то внезапно(!) приходит озарение, что следующую тысячу «мы не потянем», полученных денег едва хватает чтоб оплатить за облако, а на оптимизацию кривого движка игры уже совсем ничего не осталось.</p>
+<h3>Заключение</h3>
+<p>Конечно, я перечислил далеко не все типичные проблемы в хайлоаде. На это у меня не хватает ни сил, не желания. Но надеюсь, что после прочтения вы сможете избежать наиболее распространенных ошибок.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-100 post type-post status-publish format-standard hentry category-1" id="post-100">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d0%bd%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%b8%d0%b5/" rel="category tag">Наследие</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d1%80%d0%b0%d1%81%d1%88%d0%b8%d1%80%d1%8f%d0%b5%d0%bc-%d0%bb%d0%be%d0%b3-%d0%bf%d0%be%d1%87%d1%82%d0%be%d0%b2%d0%be%d0%b3%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b0/">Расширяем лог почтового сервера</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d1%80%d0%b0%d1%81%d1%88%d0%b8%d1%80%d1%8f%d0%b5%d0%bc-%d0%bb%d0%be%d0%b3-%d0%bf%d0%be%d1%87%d1%82%d0%be%d0%b2%d0%be%d0%b3%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b0/">12.08.2011</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d1%80%d0%b0%d1%81%d1%88%d0%b8%d1%80%d1%8f%d0%b5%d0%bc-%d0%bb%d0%be%d0%b3-%d0%bf%d0%be%d1%87%d1%82%d0%be%d0%b2%d0%be%d0%b3%d0%be-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d0%b0/#respond">Комментариев<span class="screen-reader-text"> к записи Расширяем лог почтового сервера</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Вам хотелось бы знать, с какого сайта и каким скриптом было отправлено то или иное письмо? Думаю, что да.<br>
+Однако стандартный почтовый сервер такой информации не ведет.</p>
+<p>Так исправим этот недостаток!<br>
+</p>
+<pre>cd /usr/sbin
+mv sendmail sendmail.org
+vi sendmail
+</pre>
+<p>И напишем небольшой скрипт:</p>
+<pre>#!/bin/sh
+logger -p mail.info sendmail-ext-log: site=${HTTP_HOST}, client=${REMOTE_ADDR}, script=${SCRIPT_NAME}, pwd=${PWD}, uid=${UID}, user=$(whoami)
+/usr/sbin/sendmail.org -t -i $*
+</pre>
+<p>После чего сделаем файл исполняемым:</p>
+<pre>chmod +x sendmail
+</pre>
+<p>Все. Теперь лог будет иметь всю необходимую информацию.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-99 post type-post status-publish format-standard hentry category-4" id="post-99">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d0%b0-%d0%b3%d0%b4%d0%b5-%d1%81%d1%82%d0%be%d0%b8%d1%82-%d0%b2%d0%b0%d1%88-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80/">А где стоит ваш сервер?</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%b0-%d0%b3%d0%b4%d0%b5-%d1%81%d1%82%d0%be%d0%b8%d1%82-%d0%b2%d0%b0%d1%88-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80/">07.03.2010</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%b0-%d0%b3%d0%b4%d0%b5-%d1%81%d1%82%d0%be%d0%b8%d1%82-%d0%b2%d0%b0%d1%88-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80/#respond">Комментариев<span class="screen-reader-text"> к записи А где стоит ваш сервер?</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Как известно, самый лучший хостинг — это свой сервер + сисадмин. Но задумывались ли вы, когда берете сервер в аренду у низкобюджетных Дата-Центров, что же на самом деле вы получаете за свои деньги?</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267940914_569_fdc2.jpg" alt="image"></p>
+<h6>На фотографии — реальный сервер, размещенный в бюджетном Дата-Центре <a href="http://sharktech.net/index.php?ID=datacenter&PG=2">SharkTech</a>. Он даже все еще пингуется!</h6>
+<p><br>
+Несомненно, у низкобюджетных Дата-Центров основной козырь — это цена. Вы можете получить мощный сервер с быстрым каналом в аренду за каких-то 50-80 евро.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267940915_137_fdc.jpg" alt="image"></p>
+<h6>Сервер в <a href="http://www.fdcservers.net/datacenter_chicago_pics.php">FDC Servers</a>, всего 100$ в месяц.</h6>
+<p>Однако Дата-Центр — это не только север с каналом, это еще физическая безопасность оборудования, надежное электропитание и пожаробезопасность. Это охлаждение, наконец.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267941079_109_nevip.jpg" alt="image"></p>
+<h6>Оригинальная система охлаждения стоек при помощи офисного вентилятора.</h6>
+<p>Чтож, каюсь, я и сам когда-то пользовался услугами таких Дата-Центров, для размещения своих сайтов, самый первый из которых, <a href="http://dedic.ru">dedic.ru</a>, пережил миграцию множества разных Дата-Центров.<br>
+Возможно что это у меня такая карма (нет, не хаброкарма, а обычная), что мой сайт не жил в каком-то одном Дата-Центре более года. Сначала в FDC сдох диск, потом Burst перегружал сервер 4 дня, затем в Sagonet потери на пинге достигали 15-20%, потом были Superb, Hetzner, Netdirekt и многие другие. Сервера горели, их выключали из-за абуз, отключали IP за небольшие DDOS-атаки, и так далее.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267941078_684_nevip2.jpg" alt="image"></p>
+<h6>Мы все начинали с этого, но выжил не каждый…</h6>
+<p>В конце-концов я понял, что теряю на таких ситуациях много времени, которые деньги, трафик, которые деньги, да и деньги, которые тоже… деньги.</p>
+<p>И вот тогда я решил купить нормальный сервер, выбрав по совету знакомого одесского сисадмина, который предоставлял услуги VDS на технологии XEN, и очень нахваливал Dell PowerEdge R300.<br>
+Он мотивировал это тем, что однажды в его Дата-Центре отключились кондиционеры и все серверы кроме R300 перестали работать.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267940915_528_dedic.jpg" alt="image"></p>
+<h6>Да, это он — мой сервер R300</h6>
+<p><a href="http://mhost.kiev.ua"><img src="http://mhost.kiev.ua/isp/Logo240.png" alt="image" align="right"></a>Конечно, самому покупать и транспортировать в Дата-Центр мне не очень хотелось, и я искал подходящий Дата-Центр в Киеве, который мог бы организовать услугу покупки и размещения (colocation) под ключ.<br>
+Самые внимательные уже разглядели логотип на моем сервере и догадались о каком Дата-Центре идет речь.<br>
+Но я бы хотел рассказть об отдельной технологической VIP-площадке, на которой размещен мой сервер.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267949845_631_vhod.jpg" alt="image"></p>
+<h6>Если театр начинается с вешалки, то VIP-площадка начинается с системы доступа по отпечатку пальца.</h6>
+<p>VIP-площадка расположена в центре, на Красноармейской 124. Как известно, электричество — это проблема номер один, конечно же после охлаждения летом. Именно по этому на этой площадке питание с разных распределительных подстанций и резервный, третий ввод, с трансформаторной подстанции которая расположена на территории банка + дизель-генератор, разумеется.</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267941078_428_power.jpg" alt="image"></p>
+<h6>Щитовая</h6>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267941076_183_vip2.jpg" alt="image"></p>
+<h6>Охлаждение стоек (открытых и закытых) через фальшпол.</h6>
+<p>Хороший и быстрый канал — это тоже очень важно. Пять оптических каналов от разных провайдеров, в том числе паритет с компанией «Укртелеком».</p>
+<p><img src="http://pix.org.ua/userimages/registered/1_1267941079_40_network.jpg" alt="image"></p>
+<h6>Сеть построена на активном сетевом оборудовании Cisco и HP</h6>
+<p>А цены… Цены вполне доступные — 50$ за 1U или 100$ за 2U. Подробнее на <a href="http://mhost.kiev.ua/colo">http://mhost.kiev.ua/colo</a></p>
+<p>Если вы после этой статьи захотите заказать услугу хостинга, размещния или аренды сервера в Дата-Центре Mhost, и при этом желаете поблагодарить меня материально — то можете воспользоваться <a href="http://snipr.com/the-best-dc-ua">моей реферальной ссылкой</a>. Вам-то ничего, а мне приятно 🙂</p>
+<p>P.S. Страшные картинки взяты <a href="">отсюда</a>.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-98 post type-post status-publish format-standard hentry category-4" id="post-98">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d0%bc%d0%b2%d0%b4-%d1%80%d1%84-%d0%b8-ripe-ncc-%d0%be%d0%b1%d0%b2%d0%b8%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f-%d0%b2-%d0%bf%d0%be%d1%81%d0%be%d0%b1%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">МВД РФ и RIPE NCC обвиняется в пособничестве киберприступности</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%bc%d0%b2%d0%b4-%d1%80%d1%84-%d0%b8-ripe-ncc-%d0%be%d0%b1%d0%b2%d0%b8%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f-%d0%b2-%d0%bf%d0%be%d1%81%d0%be%d0%b1%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b5/">05.03.2010</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%bc%d0%b2%d0%b4-%d1%80%d1%84-%d0%b8-ripe-ncc-%d0%be%d0%b1%d0%b2%d0%b8%d0%bd%d1%8f%d0%b5%d1%82%d1%81%d1%8f-%d0%b2-%d0%bf%d0%be%d1%81%d0%be%d0%b1%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b5/#respond">Комментариев<span class="screen-reader-text"> к записи МВД РФ и RIPE NCC обвиняется в пособничестве киберприступности</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Региональный интернет-регистратор RIPE закрывает глаза на киберпреступность, а коррумпированные силовые структуры РФ помогают преступникам уйти от ответственности, заявляет Великобританская организация SOCA (Serious Organised Crime Agency).<br>
+Размещенный в Амстердаме RIPE NCC, на основе имеющихся данных, был выявлен в соучастии создания преступной сети RBN (Russian Business Network).<br>
+Регистратор получал деньги от известной преступной организации, а в последствии коррумпированный РФ МВД позволил уйти от SOCA, сообщил Энди Олд, глава департамента по борьбе с киберпреступностью, <a href="http://www.eweekeurope.co.uk/news/rsa-likens-security-threats-to-boiling-frog-myth-2150">выступив на конференции RSA</a>.<br>
+RIPE NCC отрицает неверность своих действий, а Олд сообщил, что не проводил расследование причастности к RBN, но то, что был принят платеж от криминальной организации, свидетельствует о том, что это может быть признаком криминальной деятельности, сказал он.<br>
+«RBN — это криминальный ISP, признанный практически всеми СМИ, который зарегестрирован RIPE как локальный Европейски интернет-регистратор, выделяющий IP для промышленности», объяснили Олд.<br>
+Офицер SOCA утверждал, что любая компания, которая ведет бизнес с такой преступной организацией, уже является объектом для обвинений.<br>
+«RBN платит RIPE за услугу по выделению IP», сказал он. «Я не буду извинятся за то, что говорил, так как получение грязных денег уже само по себе преступление», заявил Олд.<br>
+<br>
+RBN используется для размещения детской порнографии, и по оценам SOCA, получае около одной трети дохода за просмотр детского порно во всем мире. Кроме этого сеть используется для распространения вирусов и контроля за ботнетами.<br>
+«Мы говорим о том, что этот специально организованный криминальный ISP, используемый для преступлений, приносит большую прибыль», сказал Олд — «Это организованная преступность, не стоит путать ее с хобби, это очень хорошо организованная структура, пренадлежащая преступному синдикату».<br>
+Как известно SOCA, ФБР, голландская и немецая правоохранительные структуры занимались исследованием RBN в прошлом году. Однако, как показало расследование, у RBN есть план быстрого развертывания, чтобы продолжать свою работу в случае если существующая система будет отключена. В Ноябре 2008 года SOCA могла отключить систему, до того как RBN смог выполнить свой план.<br>
+«Все что мы могли получить, это остановку при попытке преследования в России», признался  Олд. «Главный вопрос — куда уйдет RBN? Информация свидетельствует о том, что RBN вернулся в бизнес, но сейчас строит несколько иную бизнес-модель».<br>
+Олд добавил, что другие интернет-регистраторы также имели отношения с RBN, которые могли бы быть истолкованы как незаконные, — хотя он признал, что SOCA предпочитала работать с этими компаниями, а не стремиться привлечь их к ответственности.<br>
+«Мы фактически не рассматривали RIPE в плане сотрудничества, но если вы хотите, чтобы мы относились также к остальным, то обвинение будет применятся к ARIN, APNIC, и т.д.», сказал он.<br>
+Согласно SOCA, онаактивно работает с интернет-регистраторами, чтобы убедиться, что они не занимаются пособничеством преступникам, будь то преднамеренно или непреднамеренно.<br>
+«Когда вы получаете LIR, созданный для криминального бизнеса — это уголовное деяние, ответственность за которое идет на регионального регистратора. Мы пытаемся сделать менее благоприятную среду для киберпреступлений», добавил Олд.<br>
+В ответ на замечания, что он может быть обвинен в причастности к преступной деятельности, Поль Ренек, руководитель по внешним связям и коммуникаций в RIPE NCC сказал, что эта организация имеет очень строгие руководящие принципы для решения по LIR’ам.<br>
+«RBN был принят в качестве LIR на основе на наших списков, сказал он.» Наши перечни включают предоставление доказательств того, что перспективный LIR имеет необходимую правовую документацию, которая подтверждает, что предприятие является добросовестным «.<br>
+Ренек сообщил, что RIPE имел хорошие отношения с SOCA и другими правоохранительными организациями.<br>
+«Мы всегда сотрудничали с SOCA, и будем продолжать тесно сотрудничать с соответствующими органами, чтобы расследование было проведено как можно скорее», добавил он.</p>
+<p>SOCA относит часть вины за  остановку судебного преследования любых членов RBN на коррумпированный МВД Санкт-Петербурга, который, как утверждает Auld, по-видимому, договорился о защите преступников.<br>
+«Мы твердо верим, что RBN дал взятки не только местной милиции, а то что еще и суды и органаны власти в Санкт-Петербурге, у них в кармане, так как при попытке преследовать RBN мы встретились со значительными трудностями и российские правоохранительные органы помешали операции», говорит Олд.<br>
+Ранее в этом месяце, правоохранительные органы США получили гораздо больше сотрудничества с органами власти при закрытии фишинг сети из Египта.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-97 post type-post status-publish format-standard hentry category-4" id="post-97">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/hypervm-%d0%ba%d0%b0%d0%ba-%d1%81%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f-xen-vps/">HyperVM как средство управления XEN VPS</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/hypervm-%d0%ba%d0%b0%d0%ba-%d1%81%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f-xen-vps/">03.03.2009</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/hypervm-%d0%ba%d0%b0%d0%ba-%d1%81%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b2%d0%be-%d1%83%d0%bf%d1%80%d0%b0%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f-xen-vps/#respond">Комментариев<span class="screen-reader-text"> к записи HyperVM как средство управления XEN VPS</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Сейчас я хочу рассказать о том, что скрывается за внешне привлекательным интерфейсом HyperVM, который все еще не переведен на русский язык.</p>
+<p>Прежде всего хотелось бы отметить технически грамотный подход к созданию и размещению XEN VPS: все они размещаются на отдельных LVM разделах, что очень повышает производительность и легко позволяет управлять пулом физических дисков для размещения VPS.</p>
+<p>Выделение IP адресов так-же сделано весьма удобно — на каждый IP адрес создается виртуальная сетевая карта, которая получает IP от встроенного DHCP сервера. Это очень удобно при миграции VPS — нет нужды заходить и что-то менять, все настройки будут подхвачены по DHCP автоматом.</p>
+<p>Управление по VNC тоже внесено в саму панель HypeVM, но может быть вызвано как отдельным VNC клиентом, так и через ssh сеанс с X форвардингом по virt-viewer.</p>
+<p>Бесплатно идет 5 лицензий на VPS. Этого вполне хватает, чтоб разделить 1 стандартный сервер с 4G RAM на 4-е части по ~1G RAM на каждую VPS.</p>
+<p>Лимиты действуют на диск, оперативную память и скорость сетевой карты. Нагрузку по CPU можно отслеживать по графику.</p>
+<p>Теперь о недостатках. Их собственно всего один — невозможность создать шаблон Windows VPS на 64-х битных системах.</p>
+<p>Решить эту проблему очень просто, но для начала рассмотрим все необходимое для <a href="http://hostinghelp.biz/hypervm-xen">создания Windows VPS XEN при помощи HyperVM</a>…<br>
+</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-96 post type-post status-publish format-standard hentry category-4" id="post-96">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/wildcarddns-dns-%d0%b4%d0%bb%d1%8f-%d0%bf%d0%b0%d1%80%d0%ba%d0%be%d0%b2%d0%ba%d0%b8-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%be%d0%b2-ru/">WildcardDns — DNS для парковки доменов RU</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/wildcarddns-dns-%d0%b4%d0%bb%d1%8f-%d0%bf%d0%b0%d1%80%d0%ba%d0%be%d0%b2%d0%ba%d0%b8-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%be%d0%b2-ru/">07.02.2009</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/wildcarddns-dns-%d0%b4%d0%bb%d1%8f-%d0%bf%d0%b0%d1%80%d0%ba%d0%be%d0%b2%d0%ba%d0%b8-%d0%b4%d0%be%d0%bc%d0%b5%d0%bd%d0%be%d0%b2-ru/#respond">Комментариев<span class="screen-reader-text"> к записи WildcardDns — DNS для парковки доменов RU</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Допустим, необходимо сделать сервис парковки доменных имен, так чтоб для всех доменов выдавались значения по умолчанию, как это сделано на parking.nic.ru например.</p>
+<p>С generic доменами проблем нет и на стандартном DNS софте — достаточно сделать master зону «.» и прописать там все настройки.</p>
+<p>Другое дело — зона RU. Регистраторы требуют, чтоб для домена отдавались NS записи и выдача «.» их не устраивает.</p>
+<p>Стандартным способом тут не подойти, так как надо отдавать для любых запросов одни и те-же NS сервера, на которых идет парковка.</p>
+<p>Случайно я наткнулся на wildcarddns — авторитивный легкий DNS сервер, который как раз выполняет функции парковки, позволяя приклеивать все запросы на NS сервера к фиксированным записям.<br>
+<a href="http://hostinghelp.biz/wildcarddns">Читать дальше про wildcarddns</a><br>
+</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-95 post type-post status-publish format-standard hentry category-3" id="post-95">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d0%bc%d1%83%d1%81%d0%be%d1%80%d0%ba%d0%b0/" rel="category tag">Мусорка</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba%d0%b0%d1%8f-%d0%b3%d0%b0%d0%b4%d0%be%d1%81%d1%82%d1%8c-%d1%8d%d1%82%d0%be%d1%82-%d0%b2%d0%b0%d1%88-adaptec/">Какая гадость, этот ваш Adaptec</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba%d0%b0%d1%8f-%d0%b3%d0%b0%d0%b4%d0%be%d1%81%d1%82%d1%8c-%d1%8d%d1%82%d0%be%d1%82-%d0%b2%d0%b0%d1%88-adaptec/">15.01.2009</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%ba%d0%b0%d0%ba%d0%b0%d1%8f-%d0%b3%d0%b0%d0%b4%d0%be%d1%81%d1%82%d1%8c-%d1%8d%d1%82%d0%be%d1%82-%d0%b2%d0%b0%d1%88-adaptec/#respond">Комментариев<span class="screen-reader-text"> к записи Какая гадость, этот ваш Adaptec</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Написал о том, к чему может привести использование <a href="http://hostinghelp.biz/content/%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-openvz-%D1%8F%D0%B4%D1%80%D0%B0-%D0%BC%D0%BE%D0%B6%D0%B5%D1%82-%D0%B2%D1%8B%D0%B7%D0%B2%D0%B0%D1%82%D1%8C-%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">всяких там рейдов</a>.</p>
+<p>Особенно опасно это тем, у кого в репозитории стоит ovz-kernel и настроено обновление. Смотрите, не перезагрузитесь!</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-94 post type-post status-publish format-standard hentry category-4" id="post-94">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/%d0%b1%d0%b8%d0%bb%d0%bb%d0%b8%d0%bd%d0%b3-%d0%b4%d0%bb%d1%8f-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d0%bd%d0%b8%d0%b9-ava-panel/">Биллинг для хостинг-компаний Ava-panel</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%b1%d0%b8%d0%bb%d0%bb%d0%b8%d0%bd%d0%b3-%d0%b4%d0%bb%d1%8f-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d0%bd%d0%b8%d0%b9-ava-panel/">30.05.2007</a>
+						</span>
+					</li>
+										<li class="post-comment-link meta-wrapper">
+						<span class="meta-icon">
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19"><path d="M9.43016863,13.2235931 C9.58624731,13.094699 9.7823475,13.0241935 9.98476849,13.0241935 L15.0564516,13.0241935 C15.8581553,13.0241935 16.5080645,12.3742843 16.5080645,11.5725806 L16.5080645,3.44354839 C16.5080645,2.64184472 15.8581553,1.99193548 15.0564516,1.99193548 L3.44354839,1.99193548 C2.64184472,1.99193548 1.99193548,2.64184472 1.99193548,3.44354839 L1.99193548,11.5725806 C1.99193548,12.3742843 2.64184472,13.0241935 3.44354839,13.0241935 L5.76612903,13.0241935 C6.24715123,13.0241935 6.63709677,13.4141391 6.63709677,13.8951613 L6.63709677,15.5301903 L9.43016863,13.2235931 Z M3.44354839,14.766129 C1.67980032,14.766129 0.25,13.3363287 0.25,11.5725806 L0.25,3.44354839 C0.25,1.67980032 1.67980032,0.25 3.44354839,0.25 L15.0564516,0.25 C16.8201997,0.25 18.25,1.67980032 18.25,3.44354839 L18.25,11.5725806 C18.25,13.3363287 16.8201997,14.766129 15.0564516,14.766129 L10.2979143,14.766129 L6.32072889,18.0506004 C5.75274472,18.5196577 4.89516129,18.1156602 4.89516129,17.3790323 L4.89516129,14.766129 L3.44354839,14.766129 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/%d0%b1%d0%b8%d0%bb%d0%bb%d0%b8%d0%bd%d0%b3-%d0%b4%d0%bb%d1%8f-%d1%85%d0%be%d1%81%d1%82%d0%b8%d0%bd%d0%b3-%d0%ba%d0%be%d0%bc%d0%bf%d0%b0%d0%bd%d0%b8%d0%b9-ava-panel/#respond">Комментариев<span class="screen-reader-text"> к записи Биллинг для хостинг-компаний Ava-panel</span> нет</a>						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>17 мая вышла очередная версия биллинг-панели для хостингов — AVA-Panel, 2.1.2 (<a href="http://ava-panel.ru">http://ava-panel.ru</a>). Биллинг является скриптом написанным на языке php. Помимо систем приема и учета платежей система предоставляет еще и возможности полноценной CMS и способна вписываться практически в любой дизайн за счет гибкости шаблонов примененных при создании биллинга.</p>
+<p>Для минимизации возможности по взлому приняты серьезные меры, например пароли доступа к базе данных шифруются, что редко встречается в скриптах. Кроме того предусмотрено 4 уровня безопасности при взаимодействии с БД (предполагается 4 пользователя с разными правами доступа к базе). Доступ к панели админа закрывается как привычным способом (с использованием сессий), так и с использованием .htaccess + .htpasswd (вы сами можете выбрать способ доступа), а принимаемые из форм данные жестко определены на сервере и хакер не сможет ввести в форму дополнительное поле и отправить в нем свою информацию, поскольку если скрипт обнаружит что пришли данные которых он не ожидает, он прекратит обработку запроса.</p>
+<p>AVA-Panel поддерживает неограниченное количество серверов, таким образом одинаково подойдет как для крупной компании с десятками серверов, так и для реселлера. Для одного хостинг-проекта нужна только 1 лицензия и одна копия панели.</p>
+<p>Поддерживаются DirectAdmin, cPanel, автоматическая регистрация доменов для RuCenter. AVA-Panel обладает широкими возможностями по добавлению дополнительных модулей, поэтому в ближайшее время функциональность системы будет существенно увеличена.</p>
+<p>Есть поддержка электронных платежных систем, в т.ч. WM-Merchant, Yandex.деньги, <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e5371707b675e737f7772306c6b">[email protected]</a>, RuPay, а также формы квитанций для оплаты через Сбербанк и Счетов для оплаты юр. лицами. Вы сможете самостоятельно добавить свой собственный способ оплаты.</p>
+<p>AVA-Panel — не только система учета платежей и заказов, в нее встроена полноценная CMS и партнерская программа.</p>
+<p>Кроме стандартного набора услуг (хостинг, рагистрация доменов, VDS, Dedic, Colocation) Вы сможете добавить свои. Например помимо хостинга Вы занимаетесь раскруткой сайтов. Вы сможете позволить своим пользователям оформлять заказы на эту услугу с использованием AVA-Panel. Также есть поддержка добавления скидок для Ваших клиентов, причем как простых , так и сложных, основанных на участии нескольких услуг в заказе, особенностях оплаты и др., что расширяет маркетинговые возможности вашей компании и позволит Вам привлечь дополнительных клиентов.</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true">
+<article class="post-141 post type-post status-publish format-standard hentry category-4" id="post-141">
+
+	
+<header class="entry-header has-text-align-center">
+
+	<div class="entry-header-inner section-inner medium">
+
+		
+			<div class="entry-categories">
+				<span class="screen-reader-text">Рубрики</span>
+				<div class="entry-categories-inner">
+					<a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/" rel="category tag">Старье</a>				</div>
+			</div>
+
+			<h2 class="entry-title heading-size-1"><a href="https://dedic.ru/assp-%d0%b7%d0%b0%d0%bc%d0%b5%d0%bd%d0%b0-spamassassin-%d0%bd%d0%b0-cpanel/">ASSP — замена SpamAssassin на cPanel.</a></h2>
+		<div class="post-meta-wrapper post-meta-single post-meta-single-top">
+
+			<ul class="post-meta">
+
+									<li class="post-author meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Автор записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewbox="0 0 18 20"><path fill="" d="M18,19 C18,19.5522847 17.5522847,20 17,20 C16.4477153,20 16,19.5522847 16,19 L16,17 C16,15.3431458 14.6568542,14 13,14 L5,14 C3.34314575,14 2,15.3431458 2,17 L2,19 C2,19.5522847 1.55228475,20 1,20 C0.44771525,20 0,19.5522847 0,19 L0,17 C0,14.2385763 2.23857625,12 5,12 L13,12 C15.7614237,12 18,14.2385763 18,17 L18,19 Z M9,10 C6.23857625,10 4,7.76142375 4,5 C4,2.23857625 6.23857625,0 9,0 C11.7614237,0 14,2.23857625 14,5 C14,7.76142375 11.7614237,10 9,10 Z M9,8 C10.6568542,8 12,6.65685425 12,5 C12,3.34314575 10.6568542,2 9,2 C7.34314575,2 6,3.34314575 6,5 C6,6.65685425 7.34314575,8 9,8 Z"></path></svg>						</span>
+						<span class="meta-text">
+							Автор: <a href="https://dedic.ru/author/dedic/">dedic</a>						</span>
+					</li>
+										<li class="post-date meta-wrapper">
+						<span class="meta-icon">
+							<span class="screen-reader-text">Дата записи</span>
+							<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewbox="0 0 18 19"><path fill="" d="M4.60069444,4.09375 L3.25,4.09375 C2.47334957,4.09375 1.84375,4.72334957 1.84375,5.5 L1.84375,7.26736111 L16.15625,7.26736111 L16.15625,5.5 C16.15625,4.72334957 15.5266504,4.09375 14.75,4.09375 L13.3993056,4.09375 L13.3993056,4.55555556 C13.3993056,5.02154581 13.0215458,5.39930556 12.5555556,5.39930556 C12.0895653,5.39930556 11.7118056,5.02154581 11.7118056,4.55555556 L11.7118056,4.09375 L6.28819444,4.09375 L6.28819444,4.55555556 C6.28819444,5.02154581 5.9104347,5.39930556 5.44444444,5.39930556 C4.97845419,5.39930556 4.60069444,5.02154581 4.60069444,4.55555556 L4.60069444,4.09375 Z M6.28819444,2.40625 L11.7118056,2.40625 L11.7118056,1 C11.7118056,0.534009742 12.0895653,0.15625 12.5555556,0.15625 C13.0215458,0.15625 13.3993056,0.534009742 13.3993056,1 L13.3993056,2.40625 L14.75,2.40625 C16.4586309,2.40625 17.84375,3.79136906 17.84375,5.5 L17.84375,15.875 C17.84375,17.5836309 16.4586309,18.96875 14.75,18.96875 L3.25,18.96875 C1.54136906,18.96875 0.15625,17.5836309 0.15625,15.875 L0.15625,5.5 C0.15625,3.79136906 1.54136906,2.40625 3.25,2.40625 L4.60069444,2.40625 L4.60069444,1 C4.60069444,0.534009742 4.97845419,0.15625 5.44444444,0.15625 C5.9104347,0.15625 6.28819444,0.534009742 6.28819444,1 L6.28819444,2.40625 Z M1.84375,8.95486111 L1.84375,15.875 C1.84375,16.6516504 2.47334957,17.28125 3.25,17.28125 L14.75,17.28125 C15.5266504,17.28125 16.15625,16.6516504 16.15625,15.875 L16.15625,8.95486111 L1.84375,8.95486111 Z"></path></svg>						</span>
+						<span class="meta-text">
+							<a href="https://dedic.ru/assp-%d0%b7%d0%b0%d0%bc%d0%b5%d0%bd%d0%b0-spamassassin-%d0%bd%d0%b0-cpanel/">26.03.2007</a>
+						</span>
+					</li>
+					
+			</ul>
+
+		</div>
+
+		
+	</div>
+
+</header>
+
+	<div class="post-inner thin ">
+
+		<div class="entry-content">
+
+			<p>Хочу представить вам интересный плагин — <strong>ASSP X (ASSP eXtended).</strong> Он позволяет использовать ASSP (assp.sourceforge.net) на серверах с cPanel/WHM.</p>
+<p>По своей сути ASSP X это WHM модуль с cPanel интерфейсом для клиентов, который позволяет каждому (!) клиенту управлять настройками фильтрации почты для его доменов! Т.е. в отличие от обычного anti-spam сетапа появляется возможность настраивать фильтрацию так, как это нужно. Например, бывают случаи, когда необходимо принимать почту с несуществующих адресов и т.п. Теперь это возможно.</p>
+<p><strong>Что такое ASSP?</strong> ASSP это Anti Spam SMTP Proxy и по своей сути является проксей перед любым MTA, в нащем случае Exim. Т.к. ASSP принимает почту и передает ее Exim’у, то он полностью контролирует входящую почту и позволяет реально избавляться от спама.</p>
+<p>Что интересно, <strong>ASSP не требует много ресурсов</strong> и это особенно заметно на загруженных почтовых серверах.</p>
+<p><strong>ASSP X бесплатен</strong> и был разработан и поддерживается для использования на собственных серверах, но принято решение о том, что разрешить его бесплатное использование будет выгоднее для всех.</p>
+<p>Скачать ASSP X можно с <a href="http://www.sultanserver.com/">SultanServer.com</a></p>
+<p>Если есть вопросы — пишите, т.к. принимаю участие в разработке 🙂</p>
+
+		</div>
+
+	</div>
+
+	<div class="section-inner">
+		
+	</div>
+
+	
+</article>
+
+	
+	<div class="pagination-wrapper section-inner">
+
+		<hr class="styled-separator pagination-separator is-style-wide" aria-hidden="true">
+
+		
+	<nav class="navigation pagination" role="navigation" aria-label="Записи">
+		<h2 class="screen-reader-text">Навигация по записям</h2>
+		<div class="nav-links"><span class="prev page-numbers placeholder" aria-hidden="true"><span aria-hidden="true">←</span> <span class="nav-prev-text">Новые <span class="nav-short">записи</span></span></span><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://dedic.ru/page/2/">2</a>
+<span class="page-numbers dots">…</span>
+<a class="page-numbers" href="https://dedic.ru/page/14/">14</a>
+<a class="next page-numbers" href="https://dedic.ru/page/2/"><span class="nav-next-text">Предыдущие <span class="nav-short">записи</span></span> <span aria-hidden="true">→</span></a></div>
+	</nav>
+	</div>
+
+	
+</main>
+
+
+	<div class="footer-nav-widgets-wrapper header-footer-group">
+
+		<div class="footer-inner section-inner">
+
+			
+			
+				<aside class="footer-widgets-outer-wrapper" role="complementary">
+
+					<div class="footer-widgets-wrapper">
+
+						
+							<div class="footer-widgets column-one grid-item">
+								<div class="widget widget_archive"><div class="widget-content"><h2 class="widget-title subheading heading-size-3">Архивы</h2>		<ul>
+				<li><a href="https://dedic.ru/2013/01/">Январь 2013</a></li>
+	<li><a href="https://dedic.ru/2011/08/">Август 2011</a></li>
+	<li><a href="https://dedic.ru/2010/03/">Март 2010</a></li>
+	<li><a href="https://dedic.ru/2009/03/">Март 2009</a></li>
+	<li><a href="https://dedic.ru/2009/02/">Февраль 2009</a></li>
+	<li><a href="https://dedic.ru/2009/01/">Январь 2009</a></li>
+	<li><a href="https://dedic.ru/2007/05/">Май 2007</a></li>
+	<li><a href="https://dedic.ru/2007/03/">Март 2007</a></li>
+	<li><a href="https://dedic.ru/2007/01/">Январь 2007</a></li>
+	<li><a href="https://dedic.ru/2006/11/">Ноябрь 2006</a></li>
+	<li><a href="https://dedic.ru/2006/10/">Октябрь 2006</a></li>
+	<li><a href="https://dedic.ru/2006/09/">Сентябрь 2006</a></li>
+	<li><a href="https://dedic.ru/2006/08/">Август 2006</a></li>
+	<li><a href="https://dedic.ru/2006/06/">Июнь 2006</a></li>
+	<li><a href="https://dedic.ru/2006/05/">Май 2006</a></li>
+	<li><a href="https://dedic.ru/2006/04/">Апрель 2006</a></li>
+	<li><a href="https://dedic.ru/2006/03/">Март 2006</a></li>
+	<li><a href="https://dedic.ru/2006/01/">Январь 2006</a></li>
+	<li><a href="https://dedic.ru/2005/12/">Декабрь 2005</a></li>
+	<li><a href="https://dedic.ru/2005/11/">Ноябрь 2005</a></li>
+	<li><a href="https://dedic.ru/2005/10/">Октябрь 2005</a></li>
+	<li><a href="https://dedic.ru/2005/09/">Сентябрь 2005</a></li>
+	<li><a href="https://dedic.ru/2005/08/">Август 2005</a></li>
+	<li><a href="https://dedic.ru/2005/07/">Июль 2005</a></li>
+	<li><a href="https://dedic.ru/2005/06/">Июнь 2005</a></li>
+	<li><a href="https://dedic.ru/2005/05/">Май 2005</a></li>
+	<li><a href="https://dedic.ru/2005/04/">Апрель 2005</a></li>
+		</ul>
+			</div></div>							</div>
+
+						
+						
+							<div class="footer-widgets column-two grid-item">
+								<div class="widget widget_categories"><div class="widget-content"><h2 class="widget-title subheading heading-size-3">Рубрики</h2>		<ul>
+				<li class="cat-item cat-item-3"><a href="https://dedic.ru/category/%d0%bc%d1%83%d1%81%d0%be%d1%80%d0%ba%d0%b0/">Мусорка</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://dedic.ru/category/%d0%bd%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%b8%d0%b5/">Наследие</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://dedic.ru/category/%d1%81%d1%82%d0%b0%d1%80%d1%8c%d0%b5/">Старье</a>
+</li>
+		</ul>
+			</div></div><div class="widget widget_text enhanced-text-widget"><div class="widget-content"><h2 class="widget-title subheading heading-size-3"><a href="https://github.com/ARogovsky/dedicru/blob/gh-pages/README.md">Press F to respect</a></h2><div class="textwidget widget-text">Вы можете заменить содержимое этого участка своим контентом.
+
+
+Для этого сделайте донат на указанную сумму, после чего оформите изменения в виде пулл-реквеста для https://github.com/ARogovsky/dedicru
+
+
+<div id="paypal-button-container"></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.paypal.com/sdk/js?client-id=ARmgEcCpPrbEsUvf4Viu0JGS-O35F1MgMWQM-87zK5_cwko1PdO3EJV9AFSfaWcvugT-L3DfYVfSn6lV&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '50'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+
+
+Электронный адрес доната и пулл реквеста должны совпадать.
+
+</div></div></div>							</div>
+
+						
+					</div>
+
+				</aside>
+
+			
+		</div>
+
+	</div>
+
+
+			<footer id="site-footer" role="contentinfo" class="header-footer-group">
+
+				<div class="section-inner">
+
+					<div class="footer-credits">
+
+						<p class="footer-copyright">©
+							2020							<a href="https://dedic.ru/">DEDIC.RU: наследие об организации хостинга</a>
+						</p>
+
+						<p class="powered-by-wordpress">
+							<a href="https://ru.wordpress.org/">
+								Сайт работает на WordPress							</a>
+						</p>
+
+					</div>
+
+					<a class="to-the-top" href="#site-header">
+						<span class="to-the-top-long">
+							Наверх <span class="arrow" aria-hidden="true">↑</span>						</span>
+						<span class="to-the-top-short">
+							Вверх <span class="arrow" aria-hidden="true">↑</span>						</span>
+					</a>
+
+				</div>
+
+			</footer>
+
+			<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+	</body>
+</html>
